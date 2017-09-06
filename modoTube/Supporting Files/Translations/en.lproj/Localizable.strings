@@ -10,3 +10,6 @@
 
 //--- Common ---
 "common.close" = "close";
+
+//--- MTubeVideoViewController ---
+"MTubeVideoViewController.title" = "home";

@@ -23,11 +23,12 @@ def common
   pod 'SimpleAnimation'
   pod 'IQKeyboardManager'
   pod 'SwiftyUserDefaults'
-  pod 'ObjectMapper'
+  pod 'AlamofireObjectMapper'
 end
 
 target 'modoTube' do
   common
+  pod 'CVCalendar'
 end
 
 abstract_target :unit_tests do

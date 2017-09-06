@@ -2,8 +2,12 @@ PODS:
   - Alamofire (4.5.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
   - Crashlytics (3.8.5):
     - Fabric (~> 1.6.3)
+  - CVCalendar (1.5.0)
   - Fabric (1.6.12)
   - Firebase/Core (4.0.3):
     - FirebaseAnalytics (= 4.0.2)
@@ -42,12 +46,13 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - AlamofireObjectMapper
   - Crashlytics
+  - CVCalendar
   - Fabric
   - Firebase/Core
   - IQKeyboardManager
   - KeychainSwift
-  - ObjectMapper
   - PKHUD
   - RealmSwift
   - RxCocoa
@@ -63,7 +68,9 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
   Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
+  CVCalendar: 5d51a7bda1b9439b612de69d86a91a73befa1936
   Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
   Firebase: 9e33fdfbca37cab635c693883caa90a4475b842b
   FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
@@ -86,6 +93,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
 
-PODFILE CHECKSUM: 6772c8f769861219fed91d3e57dd460e4addd896
+PODFILE CHECKSUM: 5493339137e48d3e9bb422ebe19242c12aa75001
 
 COCOAPODS: 1.2.1

@@ -1,0 +1,18 @@
+/*
+    Localizable.strings
+    modoTube
+
+    Created by Guillaume Monot on 7/24/17
+    Copyright (c) 2017 mobizel. All rights reserved.
+*/
+
+//--- Common ---
+"common.close" = "close";
+
+//--- MTubeVideoViewController ---
+"MTubeVideoViewController.title" = "home";
+"MTVViewController.tfSearch.placeholder" = "enter your video name";
+"MTVViewController.labelPresentation.text" = "modotube";
+"MTVViewController.sendButton.name" = "send";
+"MTVViewController.HUDRequest.title" = "loading data";
+"MTVViewController.HUDRequest.subtitle" = "please wait";

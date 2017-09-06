@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vlx-cA-tqV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="av4-bd-ffm">
+            <objects>
+                <viewController id="vlx-cA-tqV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uBW-oO-GV1"/>
+                        <viewControllerLayoutGuide type="bottom" id="HJ0-al-yFH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XSO-0N-McP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="modotube" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8J6-UZ-GdO">
+                                <rect key="frame" x="127.5" y="323" width="120" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="qbp-iM-pUI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="made by Guillaume Monot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j34-8c-rPl">
+                                <rect key="frame" x="24" y="626" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="j34-8c-rPl" secondAttribute="trailing" constant="8" id="8qW-7f-t3e"/>
+                            <constraint firstItem="j34-8c-rPl" firstAttribute="centerX" secondItem="XSO-0N-McP" secondAttribute="centerX" id="jlR-Ki-qSc"/>
+                            <constraint firstItem="HJ0-al-yFH" firstAttribute="top" secondItem="j34-8c-rPl" secondAttribute="bottom" constant="20" id="p1s-HD-dHI"/>
+                            <constraint firstItem="8J6-UZ-GdO" firstAttribute="centerY" secondItem="XSO-0N-McP" secondAttribute="centerY" id="rDB-BZ-k0c"/>
+                            <constraint firstItem="8J6-UZ-GdO" firstAttribute="centerX" secondItem="XSO-0N-McP" secondAttribute="centerX" id="s0d-gz-Sjh"/>
+                            <constraint firstItem="j34-8c-rPl" firstAttribute="leading" secondItem="XSO-0N-McP" secondAttribute="leadingMargin" constant="8" id="tE0-p9-QB1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Maw-Ol-3Ly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42.399999999999999" y="214.54272863568218"/>
+        </scene>
+    </scenes>
+</document>

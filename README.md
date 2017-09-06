@@ -23,6 +23,7 @@ modoTube is one of my first iOS project, in this project, I learnt :
   - Functionality
       - life cycle (app Delegate)
       - tableView (implementation of delegate / dataSource)
+      - segmentedControl / button / label
       - use of Pod
       - use of webService (youtube API)
       - completion handler (check an internet connection)

@@ -11,6 +11,10 @@ enum L10n {
   case commonClose
   /// home
   case mTubeVideoViewControllerTitle
+  /// check your internet connection
+  case mtvViewControllerAlertReminderMessage
+  /// no internet connection
+  case mtvViewControllerAlertReminderTitle
   /// please wait
   case mtvViewControllerHUDRequestSubtitle
   /// loading data
@@ -21,6 +25,10 @@ enum L10n {
   case mtvViewControllerSendButtonName
   /// enter your video name
   case mtvViewControllerTfSearchPlaceholder
+  /// please check if you fill your API key
+  case mtvViewControllerYoutubeAlertMessage
+  /// can't fetch
+  case mtvViewControllerYoutubeAlertTitle
 }
 // swiftlint:enable type_body_length
 
@@ -33,6 +41,10 @@ extension L10n: CustomStringConvertible {
         return L10n.tr(key: "common.close")
       case .mTubeVideoViewControllerTitle:
         return L10n.tr(key: "MTubeVideoViewController.title")
+      case .mtvViewControllerAlertReminderMessage:
+        return L10n.tr(key: "MTVViewController.alertReminder.message")
+      case .mtvViewControllerAlertReminderTitle:
+        return L10n.tr(key: "MTVViewController.alertReminder.title")
       case .mtvViewControllerHUDRequestSubtitle:
         return L10n.tr(key: "MTVViewController.HUDRequest.subtitle")
       case .mtvViewControllerHUDRequestTitle:
@@ -43,6 +55,10 @@ extension L10n: CustomStringConvertible {
         return L10n.tr(key: "MTVViewController.sendButton.name")
       case .mtvViewControllerTfSearchPlaceholder:
         return L10n.tr(key: "MTVViewController.tfSearch.placeholder")
+      case .mtvViewControllerYoutubeAlertMessage:
+        return L10n.tr(key: "MTVViewController.youtubeAlert.message")
+      case .mtvViewControllerYoutubeAlertTitle:
+        return L10n.tr(key: "MTVViewController.youtubeAlert.title")
     }
   }
 

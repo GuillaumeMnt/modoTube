@@ -16,3 +16,7 @@
 "MTVViewController.sendButton.name" = "send";
 "MTVViewController.HUDRequest.title" = "loading data";
 "MTVViewController.HUDRequest.subtitle" = "please wait";
+"MTVViewController.alertReminder.title" = "no internet connection";
+"MTVViewController.alertReminder.message" = "check your internet connection";
+"MTVViewController.youtubeAlert.title" = "can't fetch";
+"MTVViewController.youtubeAlert.message" = "please check if you fill your API key";

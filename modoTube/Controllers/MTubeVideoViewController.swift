@@ -32,15 +32,15 @@ class MTubeVideoViewController: UIViewController {
     // MARK: - Application Lifecyle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         RealmHelper.remove(type: Video.self)
         RealmHelper.remove(type: Length.self)
-
+        
         setup()
         prepareData()
         prepareTableView()
@@ -57,7 +57,7 @@ extension MTubeVideoViewController {
         self.automaticallyAdjustsScrollViewInsets = false
         self.tfSearch.placeholder = tr(.mtvViewControllerTfSearchPlaceholder)
         self.labelPresentation.text = tr(.mtvViewControllerLabelPresentationText)
-        self.buttonSend.setTitle(tr(.mtvViewControllerSendButtonName), for: .normal)        
+        self.buttonSend.setTitle(tr(.mtvViewControllerSendButtonName), for: .normal)
         self.buttonSend.addTarget(self, action: #selector(textFieldShouldReturn(_:)), for: .touchDown)
         self.tfSearch.clearButtonMode = .whileEditing
         
@@ -65,7 +65,7 @@ extension MTubeVideoViewController {
     
     fileprivate func prepareData() {
         self.listVideo = RealmHelper.objects(type: Video.self)
-//        logger.verbose(listVideo ?? "list empty")
+        //        logger.verbose(listVideo ?? "list empty")
     }
     
     // MARK: - Privates Functions
@@ -110,8 +110,8 @@ extension MTubeVideoViewController {
                         HUD.hide()
                 }
             } else {
-                let alertReminder = UIAlertController(title: "No internet connection",
-                                                      message: "Check your internet connection",
+                let alertReminder = UIAlertController(title: tr(.mtvViewControllerAlertReminderTitle).capitalizingFirstLetter(),
+                                                      message: tr(.mtvViewControllerAlertReminderMessage).capitalizingFirstLetter(),
                                                       preferredStyle: .alert)
                 
                 // Action close
@@ -143,15 +143,28 @@ extension MTubeVideoViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
-        if let text = tfSearch.text, !text.isEmpty {
-            self.fetchVideoInformation(searchString: text, responseHandler: { (status) in
-                if status {
-                    self.tvVideo.reloadData()
-                    self.fetchlengthVideo()
-                }
-            })
+        if YoutubeAPI.Keys.secret.isEmpty {
+            let youtubeAlert = UIAlertController(title: tr(.mtvViewControllerYoutubeAlertTitle).capitalizingFirstLetter(),
+                                                 message: tr(.mtvViewControllerYoutubeAlertMessage).capitalizingFirstLetter(),
+                                                 preferredStyle: .alert)
+            
+            youtubeAlert.addAction(UIAlertAction(title: tr(.commonClose).capitalizingFirstLetter(),
+                                                 style: .destructive,
+                                                 handler: nil))
+            self.present(youtubeAlert, animated: true, completion: nil)
+
+            return false
+        } else {
+            if let text = tfSearch.text, !text.isEmpty {
+                self.fetchVideoInformation(searchString: text, responseHandler: { (status) in
+                    if status {
+                        self.tvVideo.reloadData()
+                        self.fetchlengthVideo()
+                    }
+                })
+            }
+            return true
         }
-        return true
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
